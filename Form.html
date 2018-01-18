@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<style>
+body
+{ background-image:url("rocky-balboa-1080_wallpaper.jpg");
+background-repeat:repeat-x;
+background-attachment:fixed; }
+</style>
+<title>Form</title>
+<script language="JavaScript" type="text/javascript">
+function validateReqFields(thisform)
+{
+ var userName=thisform.uname.value;
+ var age=thisform.age.value;
+ if(userName==null||userName=="")
+ {
+   alert("Enter the user name");
+	 thisform.uname.focus();
+	 return false;
+ }
+ if(age==null||age=="")
+ {
+   alert("Enter the age");
+	 thisform.age.focus();
+	 return false;
+ }
+ return true;
+}
+</script>
+</head>
+<body>
+<form action="Submit.html" onsubmit="return validateReqFields(this)" method="Post">
+<font color="#00ffff" size="16">
+User Name:<input type="text" name="uname" /><font color="red">*</font><br>
+Age:     <input type="text" name="age"/><font color="red">*</font><br>
+Comments:<input type="text" value="Enter your feedback here" width="200"/ name="cmmnt"><br><br>
+Favourite section:<br></font>
+<font color="#00ffff" size="16">
+<input type="checkbox" value="Main Page"/ name="1">Main Page<br>
+<input type="checkbox" value="ROCKY I"/ name="2">ROCKY I<br>
+<input type="checkbox" value="ROCKY II"/ name="3">ROCKY II<br>
+<input type="checkbox" value="ROCKY III"/ name="4">ROCKY III<br>
+<input type="checkbox" value="ROCKY IV"/ name="5">ROCKY IV<br>
+<input type="checkbox" value="ROCKY V"/ name="6">ROCKY V<br>
+<input type="checkbox" value="ROCKY BALBOA"/ name="1">ROCKY BALBOA<br>
+<input type="submit" value="SUBMIT"/>
+</form>
+</body>
+</html>
